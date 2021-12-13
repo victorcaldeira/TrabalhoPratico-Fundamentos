@@ -1,5 +1,5 @@
 import  absoluteDividend from "./absoluteDividend";
-import  activeArray  from "./Array/activeArray";
+import  activeArray  from "./arrays/activeArray";
 
 
 export default function effectiveReturnActive(active) {

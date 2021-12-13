@@ -1,12 +1,14 @@
 
 import absoluteDividend from "./functions/absoluteDividend.js";
-import activeRisk from "./functions/ActiveRisk.js";
-import activeArray from "./functions/Array/activeArray.js";
+import activeRisk from "./functions/activeRisk.js";
+import activeArray from "./functions/arrays/activeArray.js";
 import effectiveReturnActive from "./functions/effectiveReturnActive.js";
 import expectedReturnActive from "./functions/expectedReturnActive.js";
-import ramdomPortfolio from "./functions/Portfolio/RamdomPortfolio.js";
 import riskNormalized from "./functions/riskNormalized.js";
 import standardDeviation from "./functions/standardDeviation.js";
+import bruteForcePortfolio from "./portfolios/bruteForcePortfolio.js";
+import greedyPortfolio from "./portfolios/greedyPortfolio.js";
+import ramdomPortfolio from "./portfolios/ramdomPortfolio.js";
 
 
 export function activeMenu(activeName){
@@ -32,8 +34,10 @@ export default function menu() {
     console.log("Investment Portfolio");
     console.log("\nIf you want change csv, please replace the file data.csv");
 
-    // activeMenu("alzr");
+    activeMenu("hgre");
     ramdomPortfolio();
+    greedyPortfolio();
+    bruteForcePortfoliolio();
 }
 
 

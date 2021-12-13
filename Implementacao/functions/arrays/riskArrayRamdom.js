@@ -2,7 +2,7 @@ import data from "../..";
 import  activeRisk  from "../activeRisk";
 import  activeArray  from "./activeArray";
 
-export default function riskArrayBruteForce() {
+export default function riskArrayRamdoms() {
     let value = data;
     let array = [];
     let arrayResult = [];
@@ -17,7 +17,7 @@ export default function riskArrayBruteForce() {
     array.forEach(function(value){
         arrayResult.push({
             active: value,
-            riskActive: activeRisk(activeArray(value))
+            riskActive: activeRisk(activeArray(value)),
         });
     });
     return arrayResult;

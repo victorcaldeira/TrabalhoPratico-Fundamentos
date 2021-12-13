@@ -1,5 +1,5 @@
 import activeRisk from "./ActiveRisk.js";
-import activeArray from "./Array/activeArray.js";
+import activeArray from "./arrays/activeArray.js";
 
 export default function standardDeviation(active) {
     let price = activeArray(active), risk = activeRisk(price), variation = 0;

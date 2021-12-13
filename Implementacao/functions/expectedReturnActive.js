@@ -1,4 +1,4 @@
-import  activeArray  from "./Array/activeArray.js";
+import  activeArray  from "./arrays/activeArray.js";
 
 export default function expectedReturnActive(active) {
     let average = 0, sum = 0, array = activeArray(active);
