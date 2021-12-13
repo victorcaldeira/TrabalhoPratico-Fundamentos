@@ -1,0 +1,23 @@
+{
+  "name": "investimento",
+  "version": "1.0.0",
+  "description": "portifolio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorcaldeira/TrabalhoPratico-Fundamentos.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Victor Menezes e Lucas Padrao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorcaldeira/TrabalhoPratico-Fundamentos/issues"
+  },
+  "homepage": "https://github.com/victorcaldeira/TrabalhoPratico-Fundamentos#readme"
+}
