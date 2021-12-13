@@ -4,11 +4,9 @@ import activeArray from "./activeArray";
 
 export default function riskArrayBruteForce() {
     let value = data;
-    let array = [], arrayResult = [], count = 1, sumRiskWeight = 0, arraySumRiskWeight = [], arraySumRiskWeightOrder = [];
-    let highValueSumRiskWeight = 0, index = 0;
+    let array = [], arrayResult = [], arrayOrdered = [];
 
-
-    var setActiveName = new Set(value.map(x => x.active));
+    let setActiveName = new Set(value.map(x => x.active));
 
     setActiveName.forEach(function (value) {
         value != 'ativo' &&
@@ -16,41 +14,26 @@ export default function riskArrayBruteForce() {
     });
 
     array.forEach(function (value) {
-        let i = 0;
-        array.forEach(function (value) {
-            sumRiskWeight += activeRisk(activeArray(value)) * count
-            count++;
-        })
-        if (count > array.length) {
-            count = 1;
-        }
-        arraySumRiskWeight.push(sumRiskWeight);
-        count = i
-    })
-
-    arraySumRiskWeightOrder = arraySumRiskWeight;
-
-    arraySumRiskWeightOrder.sort(function (a, b) {
-        return a > b ? -1 : a > b ? 1 : 0;
+        arrayOrdered.push({
+            active: value,
+            riskActive: activeRisk(activeArray(value)),
+        });
     });
 
-    highValueSumRiskWeight = arraySumRiskWeightOrder[0];
+    arrayOrdered.sort(function (a, b) {
+        return a.riskActive < b.riskActive ? -1 : a.riskActive > b.riskActive ? 1 : 0;
+    });
 
-    arraySumRiskWeight.forEach(function (value) {
-        let count = 0;
-        if (value == highValueSumRiskWeight) {
-            index = count;
-        }
-        count++;
-    })
+    let count = arrayOrdered.length;
 
-    array.forEach(function (value) {
+    arrayOrdered.map(x => x.active).forEach(function (value) {
         arrayResult.push({
             active: value,
             riskActive: activeRisk(activeArray(value)),
-            weight: index
-        });
-    });
+            weight: count
+        })
+        count--
+    })
 
     return arrayResult;
 }

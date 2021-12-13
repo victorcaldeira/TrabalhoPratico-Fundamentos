@@ -7,7 +7,7 @@ export default function riskArrayRamdoms() {
     let array = [];
     let arrayResult = [];
 
-    var setActiveName = new Set(value.map(x => x.active));
+    let setActiveName = new Set(value.map(x => x.active));
 
     setActiveName.forEach(function(value) {
         value != 'ativo' &&
