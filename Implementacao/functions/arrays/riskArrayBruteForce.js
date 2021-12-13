@@ -4,14 +4,8 @@ import activeArray from "./activeArray";
 
 export default function riskArrayBruteForce() {
     let value = data;
-    let array = [];
-    let arrayResult = [];
-    let count = 1;
-    let sumRiskWeight = 0;
-    let arraySumRiskWeight = [];
-    let arraySumRiskWeightOrder = [];
-    let highValueSumRiskWeight = 0;
-    let index = 0;
+    let array = [], arrayResult = [], count = 1, sumRiskWeight = 0, arraySumRiskWeight = [], arraySumRiskWeightOrder = [];
+    let highValueSumRiskWeight = 0, index = 0;
 
 
     var setActiveName = new Set(value.map(x => x.active));
