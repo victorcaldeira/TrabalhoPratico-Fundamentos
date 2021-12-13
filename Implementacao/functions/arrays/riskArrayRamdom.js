@@ -18,6 +18,7 @@ export default function riskArrayRamdoms() {
         arrayResult.push({
             active: value,
             riskActive: activeRisk(activeArray(value)),
+            randomNumber: Math.random() * (9 - 0) + 0,
         });
     });
     return arrayResult;

@@ -34,10 +34,10 @@ export default function menu() {
     console.log("Investment Portfolio");
     console.log("\nIf you want change csv, please replace the file data.csv");
 
-    activeMenu("hgre");
+    activeMenu("jsre");
     ramdomPortfolio();
     greedyPortfolio();
-    bruteForcePortfoliolio();
+    bruteForcePortfolio();
 }
 
 
